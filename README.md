@@ -1,6 +1,12 @@
 Readme here
 
 
+# Stack
+- Next.js / App dir
+- Shadcn component library
+- Groq inference endpoints
+
+
 use meta.ai
 
 
