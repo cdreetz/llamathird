@@ -23,9 +23,12 @@ const formSchema = z.object({
   password: z.string().min(1, {
     message: "Please enter a password.",
   }),
+  ["confirm-password"]: z.string().min(1, {
+    message: "Please enter a password.",
+  }),
 });
 
-export function LoginForm() {
+export function SignUpForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -66,6 +69,19 @@ export function LoginForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Password</FormLabel>
+              <FormControl>
+                <Input placeholder="●●●●●●●●" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="confirm-password"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Confirm password</FormLabel>
               <FormControl>
                 <Input placeholder="●●●●●●●●" {...field} />
               </FormControl>

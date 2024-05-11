@@ -1,9 +1,9 @@
-import { LoginForm } from "./_comp/LoginForm";
+import { SignUpForm } from "./_comp/SignUpForm";
 
 export default function LoginPage() {
   return (
     <>
-      <LoginForm />
+      <SignUpForm />
     </>
   );
 }
